@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+# How this Git repo inside a git repo is manged
+
+So instead of using subfolder feture of github i simply deleted the git repo inside the client react folder
+Now this might give problem to me in future but lets see how it will go
+At last i'll learn something about it 
+Resources(https://stackoverflow.com/questions/36236484/maintaining-a-git-repo-inside-another-git-repo)
+(https://www.youtube.com/watch?v=Rvjcolmg4d4)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
