@@ -1,10 +1,10 @@
-import './App.css';
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import DateTimePicker from 'react-datetime-picker';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
+import './Main.css';
 
 function App() {
 
