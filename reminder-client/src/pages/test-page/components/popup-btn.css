@@ -17,6 +17,7 @@
     padding: 20px;
     border-radius: 8px;
     outline: none;
+    width: 30%;
 }
 
 .reminder-modal h2 {
@@ -24,6 +25,7 @@
     text-align: center;
 }
 .reminder-modal .reminder-input {
+    resize: none;
     border: 1px solid #c6c6c6;
     outline: none;
     margin: 1rem 0;
@@ -37,6 +39,11 @@
     color: #5f5f5f;
 }
 
+.reminder-modal .picker-container{
+    display: flex;
+    justify-content: center;
+}
+
 
 .reminder-modal .submit-btn {
     background: #1877f2;
@@ -44,14 +51,17 @@
     color: #fff;
     font-size: 1rem;
     text-align:center;
-    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59%;
     margin: 1rem 0;
     padding: 0.5rem 0.3rem;
     border-radius: 8px;
     outline: none;
     cursor: pointer;
 }
-.reminder-modal .close-btn {
+.reminder-modal .center-btn {
     display: flex;
     justify-content: center;
     align-items: center;

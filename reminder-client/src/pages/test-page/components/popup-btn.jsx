@@ -7,7 +7,6 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
-import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const PopupBTN = () => {
     const [open, setOpen] = useState(false);
@@ -36,7 +35,7 @@ const PopupBTN = () => {
             >
                 <div className="reminder-modal">
                     <h2 id="reminder-modal-title">Remind Me</h2>
-                    <input className='reminder-input' type='text' placeholder='Reminder note here...'></input>
+                    <textarea className='reminder-input' type='text' cols="40" rows="4"  placeholder='Reminder note here...'></textarea>
                     {/* <input type='text' placeholder='Reminder note here...' value={reminderMsg} onChange={e => setReminderMsg(e.target.value)}></input> */}
                     {/* <DateTimePicker
                         value={remindAt}
@@ -53,16 +52,17 @@ const PopupBTN = () => {
                                 seconds: renderTimeViewClock,
                             }}
                             disablePast
-                            border="none"
-                            outline="none"
+
                         // value={value}
                         // onChange={(newValue) => setValue(newValue)}
                         />
                     </LocalizationProvider>
                     </div>
-                    <div className='submit-btn'>Add Reminder</div>
+                    <div className='center-btn'>
+                        <div className='submit-btn'>Add Reminder</div>
+                    </div>
                     {/* <div className='submit-btn' onClick={addReminder}>Add Reminder</div> */}
-                    <div className='close-btn'>
+                    <div className='center-btn'>
                         <Button onClick={handleClose}><CloseIcon /></Button>
                     </div>
                 </div>
