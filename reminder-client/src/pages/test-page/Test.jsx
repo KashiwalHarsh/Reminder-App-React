@@ -1,13 +1,9 @@
 import './Test.css';
-import React,{useState,useEffect} from 'react';
+import React from 'react';
+import LeftSection from './components/left-section';
+import RightSection from './components/right-section';
 // import axios from 'axios';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import SettingsIcon from '@mui/icons-material/Settings';
-import BackupIcon from '@mui/icons-material/Backup';
-import Person2Icon from '@mui/icons-material/Person2';
-import PopupBTN from './components/popup-btn';
+
 
 function App() {
 
@@ -32,39 +28,8 @@ function App() {
   // }
   return (
     <div className='parent'>
-      <div className='left-section'>
-        <div className='upper'>
-          <PopupBTN/>
-        </div>
-        <div className='lower'>
-          <div className='icon-container'>
-            <GitHubIcon className='nav-icons'/>
-            <span>Github</span>
-          </div>
-          <div className='icon-container'>
-            <AccessibilityIcon className='nav-icons' />
-            <span>Help</span>
-          </div>
-          <div className='icon-container'>
-            <DarkModeIcon className='nav-icons'/>
-            <span>Dark Mode</span>
-          </div>
-          <div className='icon-container'>
-            <SettingsIcon className='nav-icons'/>
-            <span>Setting</span>
-          </div>
-          <div className='icon-container'>
-            <BackupIcon className='nav-icons'/>
-            <span>Backup</span>
-          </div>
-          <div className='icon-container'>
-            <Person2Icon className='nav-icons'/>
-            <span>Profile</span>
-          </div>
-        </div>
-      </div>
-      <div className='right-section'>
-      </div>
+      <LeftSection/>
+      <RightSection/>
     </div>
   );
 }
