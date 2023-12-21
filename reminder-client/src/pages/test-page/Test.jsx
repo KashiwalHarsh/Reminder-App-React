@@ -4,7 +4,7 @@ import React,{useState,useEffect} from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import SettingsIcon from '@mui/icons-material/Settings';
 import BackupIcon from '@mui/icons-material/Backup';
 import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './components/popup-btn';
@@ -37,12 +37,30 @@ function App() {
           <PopupBTN/>
         </div>
         <div className='lower'>
-          <GitHubIcon/>
-          <AccessibilityIcon/>
-          <DarkModeIcon/>
-          <SettingsApplicationsIcon/>
-          <BackupIcon/>
-          <Person2Icon/>
+          <div className='icon-container'>
+            <GitHubIcon className='nav-icons'/>
+            <span>Github</span>
+          </div>
+          <div className='icon-container'>
+            <AccessibilityIcon className='nav-icons' />
+            <span>Help</span>
+          </div>
+          <div className='icon-container'>
+            <DarkModeIcon className='nav-icons'/>
+            <span>Dark Mode</span>
+          </div>
+          <div className='icon-container'>
+            <SettingsIcon className='nav-icons'/>
+            <span>Setting</span>
+          </div>
+          <div className='icon-container'>
+            <BackupIcon className='nav-icons'/>
+            <span>Backup</span>
+          </div>
+          <div className='icon-container'>
+            <Person2Icon className='nav-icons'/>
+            <span>Profile</span>
+          </div>
         </div>
       </div>
       <div className='right-section'>

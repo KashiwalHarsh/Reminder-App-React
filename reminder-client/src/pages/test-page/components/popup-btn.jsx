@@ -21,10 +21,9 @@ const PopupBTN = () => {
 
     return (
         <div className="reminder-container">
-            <div className='add-btn'>
+            <div className='add-btn' onClick={handleOpen}>
                 <AddIcon
                     className='add-icon'
-                    onClick={handleOpen}
                     fontSize='large'
                 >
                 </AddIcon>
