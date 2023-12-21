@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import AddIcon from '@mui/icons-material/Add';
 import './popup-btn.css';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -21,14 +21,14 @@ const PopupBTN = () => {
 
     return (
         <div className="reminder-container">
-            <Button
-                variant="contained"
-                color="primary"
-                startIcon={<AddCircleOutlineIcon />}
-                onClick={handleOpen}
-            >
-                Add Reminder
-            </Button>
+            <div className='add-btn'>
+                <AddIcon
+                    className='add-icon'
+                    onClick={handleOpen}
+                    fontSize='large'
+                >
+                </AddIcon>
+            </div>
             <Modal
                 open={open}
                 onClose={handleClose}

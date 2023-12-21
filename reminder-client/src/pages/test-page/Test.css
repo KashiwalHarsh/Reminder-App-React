@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+}
+.left-section{
+    height: 92vh;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px;
+    margin: 10px;
+    flex-basis: 7%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+.left-section .upper{
+     
+}
+.left-section .lower{
+     
+}
+
+.right-section{
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px;
+    margin: 10px 10px 10px 5px;
+    height: 92vh;
+    flex-basis: 93%;
+}

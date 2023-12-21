@@ -1,6 +1,12 @@
 import './Test.css';
 import React,{useState,useEffect} from 'react';
 // import axios from 'axios';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import BackupIcon from '@mui/icons-material/Backup';
+import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './components/popup-btn';
 
 function App() {
@@ -26,7 +32,21 @@ function App() {
   // }
   return (
     <div className='parent'>
-      <PopupBTN/>
+      <div className='left-section'>
+        <div className='upper'>
+          <PopupBTN/>
+        </div>
+        <div className='lower'>
+          <GitHubIcon/>
+          <AccessibilityIcon/>
+          <DarkModeIcon/>
+          <SettingsApplicationsIcon/>
+          <BackupIcon/>
+          <Person2Icon/>
+        </div>
+      </div>
+      <div className='right-section'>
+      </div>
     </div>
   );
 }
