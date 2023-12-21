@@ -26,7 +26,7 @@
 
 .reminder-card>h2 {
     margin-bottom: 10px;
-    color: slateblue;
+    color: #60519e;
     font-size: medium;
 }
 .reminder-card>h3 {
@@ -58,4 +58,9 @@
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+}
+
+.delete-icon{
+    color: #60519e;
+    font-size: smaller;
 }
