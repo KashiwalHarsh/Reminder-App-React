@@ -29,7 +29,6 @@ const RightSection = () => {
               <span style={{color:"yellowgreen",fontWeight:'bold'}}> Sent</span>
               <div className="button"><DeleteIcon className='delete-icon'/>&nbsp; Delete</div>
             </div>
-            
     </div>
   )
 }
