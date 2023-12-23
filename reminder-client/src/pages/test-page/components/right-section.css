@@ -9,6 +9,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
+    /* background-color: black; */
+    background: url('https://source.unsplash.com/random/1920x1080/?nature'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
 }
 
 
