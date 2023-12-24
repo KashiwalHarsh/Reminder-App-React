@@ -7,6 +7,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import BackupIcon from '@mui/icons-material/Backup';
 import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './popup-btn';
+import PopupHelp from './popup-help';
 
 const LeftSection = () => {
   return (
@@ -20,7 +21,9 @@ const LeftSection = () => {
             <span>Contribute</span>
           </div>
           <div className='icon-container'>
-            <AccessibilityIcon className='nav-icons' />
+            <AccessibilityIcon className='nav-icons'>
+              <PopupHelp/>
+            </AccessibilityIcon>
             <span>Help</span>
           </div>
           <div className='icon-container'>
