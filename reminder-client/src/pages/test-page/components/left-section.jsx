@@ -16,7 +16,9 @@ const LeftSection = () => {
         </div>
         <div className='lower'>
           <div className='icon-container'>
-            <GitHubIcon className='nav-icons' onClick={"https://github.com/KashiwalHarsh/Reminder-App-React"}/>
+            <a href='https://github.com/KashiwalHarsh/Reminder-App-React' target='_blank' rel='noreferrer'>
+              <GitHubIcon className='nav-icons'/>
+            </a>
             <span>Contribute</span>
           </div>
           <div className='icon-container'>
