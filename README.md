@@ -64,9 +64,6 @@ Stay on top of your tasks and events effortlessly with the WhatsApp Reminder App
 
 Contributions are welcome! If you have any ideas for improvements or bug fixes, feel free to open an issue or create a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
