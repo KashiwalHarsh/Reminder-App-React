@@ -1,0 +1,35 @@
+.about-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    outline: none;
+    width: 30%;
+}
+.about-modal h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.about-modal p {
+    margin-bottom: 8px;
+    text-align: left;
+    color: #727272;
+    font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+}
+.about-modal .center-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icon{
+    color: #60519e;
+    cursor: pointer;
+    padding: 12px 0px 2px 0px;
+    margin-top: 2px;
+}

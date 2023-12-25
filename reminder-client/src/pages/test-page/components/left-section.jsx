@@ -1,13 +1,12 @@
 import './left-section.css';
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SettingsIcon from '@mui/icons-material/Settings';
 import BackupIcon from '@mui/icons-material/Backup';
 import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './popup-btn';
-import PopupHelp from './popup-help';
+import PopupAbout from './popup-about';
 
 const LeftSection = () => {
   return (
@@ -17,14 +16,12 @@ const LeftSection = () => {
         </div>
         <div className='lower'>
           <div className='icon-container'>
-            <GitHubIcon className='nav-icons'/>
+            <GitHubIcon className='nav-icons' onClick={"https://github.com/KashiwalHarsh/Reminder-App-React"}/>
             <span>Contribute</span>
           </div>
           <div className='icon-container'>
-            <AccessibilityIcon className='nav-icons'>
-              <PopupHelp/>
-            </AccessibilityIcon>
-            <span>Help</span>
+              <PopupAbout/>
+              <span>About</span>
           </div>
           <div className='icon-container'>
             <DarkModeIcon className='nav-icons'/>
