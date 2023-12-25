@@ -9,7 +9,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
-    background-color: white;
+    background-color: var(--body-background);
     background:
         linear-gradient(rgba(0, 0, 0, 0.58),
             rgba(0, 0, 0, 0.58)),
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: row;
     display: inline-block;
-    background: white;
+    background: var(--body-background);
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
@@ -34,27 +34,27 @@
 
 .reminder-card>h2 {
     margin-bottom: 10px;
-    color: #60519e;
+    color: var(--heading-color);
     font-size: medium;
 }
 .reminder-card>h3 {
     margin-bottom: 5px;
-    color: grey;
+    color: var(--subheading-color);
     font-size: small;
     display: inline-block;
 
 }
 
 .reminder-card>span {
-    color: grey;
+    color: var(--subheading-color);
     margin-bottom: 10px;
     font-size: small;
 }
 
 .reminder-card>.button {
-    background: #e6e6e6;
+    background-color: transparent;
     border: 1px solid #60519e;
-    color: #60519e;
+    color: var(--icon-color);
     font-size: small;
     width: inherit;
     text-align: center;
@@ -69,6 +69,6 @@
 }
 
 .delete-icon{
-    color: #60519e;
+    color: var(--icon-color);
     font-size: smaller;
 }

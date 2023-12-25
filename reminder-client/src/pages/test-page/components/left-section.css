@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column; 
-    background-color: white;
+    background-color: var(--body-background);
 }
 .left-section .upper{
     display: flex;
@@ -27,12 +27,12 @@
     align-items: center;
 }
 .left-section .lower .icon-container span{
-    color: #60519e;
+    color: var(--icon-color);
     font-size: 8px;
     cursor: pointer;
 }
 .left-section .lower .nav-icons{
-    color: #60519e;
+    color: var(--icon-color);
     cursor: pointer;
     padding: 12px 0px 2px 0px;
     margin-top: 2px;
