@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
@@ -7,6 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
+import ThemeContext from '../context/ThemeContext';
 
 const PopupBTN = () => {
     
@@ -19,6 +20,8 @@ const PopupBTN = () => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const {darkTheme} = useContext(ThemeContext)
 
     return (
         <div className="reminder-container">
@@ -33,7 +36,7 @@ const PopupBTN = () => {
                 open={open}
                 onClose={handleClose}
             >
-                <div className="reminder-modal">
+                <div className="reminder-modal" data-theme={darkTheme&&'dark'}>
                     <h2 id="reminder-modal-title">Remind Me</h2>
                     <textarea className='reminder-input' type='text' cols="40" rows="4"  placeholder='Reminder note here...'></textarea>
                     {/* <input type='text' placeholder='Reminder note here...' value={reminderMsg} onChange={e => setReminderMsg(e.target.value)}></input> */}

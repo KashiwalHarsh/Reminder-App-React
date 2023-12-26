@@ -12,6 +12,7 @@
 .about-modal h2 {
     margin-bottom: 10px;
     text-align: center;
+    color: var(--heading-color);
 }
 .about-modal p {
     margin-bottom: 8px;

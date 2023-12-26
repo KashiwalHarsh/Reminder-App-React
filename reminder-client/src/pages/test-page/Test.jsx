@@ -2,6 +2,7 @@ import './Test.css';
 import React from 'react';
 import LeftSection from './components/left-section';
 import RightSection from './components/right-section';
+import ThemeContextProvider from './context/ThemeContextProvider';
 // import axios from 'axios';
 
 
@@ -27,10 +28,12 @@ function App() {
   //   .then(res=>setReminderList(res.data))
   // }
   return (
+    <ThemeContextProvider>
     <div className='parent'>
       <LeftSection/>
       <RightSection/>
     </div>
+    </ThemeContextProvider>
   );
 }
 

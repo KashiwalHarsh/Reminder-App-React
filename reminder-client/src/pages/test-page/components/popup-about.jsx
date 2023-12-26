@@ -1,8 +1,9 @@
+import './popup-about.css';
 import { Button, Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import InfoIcon from '@mui/icons-material/Info';
-import React, { useState } from 'react'
-import './popup-about.css';
+import React, { useContext, useState } from 'react'
+import ThemeContext from '../context/ThemeContext';
 
 
 const PopupAbout = () => {
@@ -17,8 +18,10 @@ const PopupAbout = () => {
         setOpen(false);
     };
 
+    const {darkTheme} = useContext(ThemeContext)
+
     return (
-        <div className="about-container">
+        <div className="about-container" >
             <div onClick={handleOpen}>
                 <InfoIcon className='icon' />
             </div>
@@ -26,7 +29,7 @@ const PopupAbout = () => {
                 open={open}
                 onClose={handleClose}
             >
-                <div className="about-modal">
+                <div className="about-modal" data-theme={darkTheme&&'dark'}>
                     <h2>About</h2>
                     <p>
                         Never miss a beat with this WhatsApp Reminder App! This open-source web application allows users to seamlessly schedule reminders for important tasks or events and receive timely alerts directly to their WhatsApp account using the Twilio API.

@@ -29,6 +29,7 @@
 .reminder-modal h2 {
     margin-bottom: 10px;
     text-align: center;
+    color: var(--heading-color);
 }
 .reminder-modal .reminder-input {
     resize: none;
@@ -39,6 +40,8 @@
     font-size: 1rem;
     border-radius: 4px;
     width: -webkit-fill-available;
+    background-color: var(--body-background);
+    color: var(--subheading-color);
 }
 
 ::placeholder {

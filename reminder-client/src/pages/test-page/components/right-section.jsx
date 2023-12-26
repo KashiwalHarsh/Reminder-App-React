@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
 import './right-section.css';
+import React, { useContext } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
+import ThemeContext from '../context/ThemeContext';
 
 const RightSection = () => {
-  const [isDark,setIsDark] = useState(true)
+
+  const {darkTheme} = useContext(ThemeContext)
+
   return (
-    <div className='right-section' data-theme={isDark?"dark":"light"}>
+    <div className='right-section' data-theme={darkTheme&&'dark'}>
             <div className="reminder-card">
               <h2>Reminder Note Demo that complete this work or call someone and check mail</h2>
               <h3>Remind me at : </h3>

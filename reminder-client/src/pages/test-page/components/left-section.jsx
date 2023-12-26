@@ -1,5 +1,5 @@
 import './left-section.css';
-import React, { useState } from 'react'
+import React, {useContext } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SettingsIcon from '@mui/icons-material/Settings';
 import BackupIcon from '@mui/icons-material/Backup';
@@ -7,13 +7,21 @@ import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './popup-btn';
 import PopupAbout from './popup-about';
 import DarkToggle from './toggle-dark';
+import ThemeContext from '../context/ThemeContext';
 
 const LeftSection = () => {
 
-  const [isDark,setIsDark] = useState(true)
+  const {darkTheme,setDarkTheme}= useContext(ThemeContext)
+
+  const handle = (e)=>{    
+    e.preventDefault()
+    setDarkTheme(prevState =>(
+      !prevState
+    ))
+  }
 
   return (
-    <div className='left-section' data-theme={isDark?"dark":"light"}>
+    <div className='left-section' data-theme={darkTheme&&'dark'}>
         <div className='upper'>
           <PopupBTN/>
         </div>
@@ -30,9 +38,9 @@ const LeftSection = () => {
           </div>
           <div className='icon-container'>
             <DarkToggle 
-              handleChange={()=>setIsDark(!isDark)}
+              handleChange={handle}
             />
-            <span>Dark Mode</span>
+            <span>{darkTheme?'Light Mode':'Dark Mode'}</span>
           </div>
           <div className='icon-container'>
             <SettingsIcon className='nav-icons'/>
