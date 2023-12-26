@@ -32,10 +32,19 @@ const PopupSetting = () => {
                 <div className="setting-modal" data-theme={darkTheme&&'dark'}>
                     <h2>Setting</h2>
                     <p>
-                        Option 1
+                        Sky
                     </p>
                     <p>
-                        Option 2
+                        Forest
+                    </p>
+                    <p>
+                        Sunsets
+                    </p>
+                    <p>
+                        Flowers
+                    </p>
+                    <p>
+                        Dark
                     </p>
                     <div className='center-btn'>
                         <Button onClick={handleClose}><CloseIcon /></Button>
