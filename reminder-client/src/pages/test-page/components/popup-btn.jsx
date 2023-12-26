@@ -9,8 +9,9 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
 import ThemeContext from '../context/ThemeContext';
 
+
 const PopupBTN = () => {
-    
+
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -21,13 +22,13 @@ const PopupBTN = () => {
         setOpen(false);
     };
 
-    const {darkTheme} = useContext(ThemeContext)
+    const { darkTheme } = useContext(ThemeContext)
 
     const darkStyles = {
         input: { color: '#fff' },
         label: { color: '#fff' },
         svg: { color: '#fff' },
-        "& label.Mui-focused":{color:'#fff'},
+        "& label.Mui-focused": { color: '#fff' },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
                 borderColor: 'white',
@@ -54,9 +55,9 @@ const PopupBTN = () => {
                 open={open}
                 onClose={handleClose}
             >
-                <div className="reminder-modal" data-theme={darkTheme&&'dark'}>
+                <div className="reminder-modal" data-theme={darkTheme && 'dark'}>
                     <h2 id="reminder-modal-title">Remind Me</h2>
-                    <textarea className='reminder-input' type='text' cols="40" rows="4"  placeholder='Reminder note here...'></textarea>
+                    <textarea className='reminder-input' type='text' cols="40" rows="4" placeholder='Reminder note here...'></textarea>
                     {/* <input type='text' placeholder='Reminder note here...' value={reminderMsg} onChange={e => setReminderMsg(e.target.value)}></input> */}
                     {/* <DateTimePicker
                         value={remindAt}
@@ -64,22 +65,22 @@ const PopupBTN = () => {
                         minDate={new Date()}
                     /> */}
                     <div className='picker-container'>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DateTimePicker
-                            label="Date and Time"
-                            viewRenderers={{
-                                hours: renderTimeViewClock,
-                                minutes: renderTimeViewClock,
-                                seconds: renderTimeViewClock,
-                            }}
-                            disablePast
-                            sx={darkTheme&&darkStyles}
-                            
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DateTimePicker
+                                label="Date and Time"
+                                viewRenderers={{
+                                    hours: renderTimeViewClock,
+                                    minutes: renderTimeViewClock,
+                                    seconds: renderTimeViewClock,
+                                }}
+                                disablePast
+                                slotProps={{ popper: { placement: 'right' }}}
+                                sx={darkTheme && darkStyles}
 
-                        // value={value}
-                        // onChange={(newValue) => setValue(newValue)}
-                        />
-                    </LocalizationProvider>
+                            // value={value}
+                            // onChange={(newValue) => setValue(newValue)}
+                            />
+                        </LocalizationProvider>
                     </div>
                     <div className='center-btn'>
                         <div className='submit-btn'>Add Reminder</div>
