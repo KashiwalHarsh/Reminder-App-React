@@ -23,6 +23,24 @@ const PopupBTN = () => {
 
     const {darkTheme} = useContext(ThemeContext)
 
+    const darkStyles = {
+        input: { color: '#fff' },
+        label: { color: '#fff' },
+        svg: { color: '#fff' },
+        "& label.Mui-focused":{color:'#fff'},
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'white',
+            },
+            '&:hover fieldset': {
+                borderColor: 'white',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: 'white'
+            },
+        },
+    }
+
     return (
         <div className="reminder-container">
             <div className='add-btn' onClick={handleOpen}>
@@ -55,6 +73,8 @@ const PopupBTN = () => {
                                 seconds: renderTimeViewClock,
                             }}
                             disablePast
+                            sx={darkTheme&&darkStyles}
+                            
 
                         // value={value}
                         // onChange={(newValue) => setValue(newValue)}
