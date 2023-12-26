@@ -1,11 +1,11 @@
 import './left-section.css';
 import React, {useContext } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import SettingsIcon from '@mui/icons-material/Settings';
 import BackupIcon from '@mui/icons-material/Backup';
 import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './popup-btn';
 import PopupAbout from './popup-about';
+import PopupSetting from './popup-setting';
 import DarkToggle from './toggle-dark';
 import ThemeContext from '../context/ThemeContext';
 
@@ -43,8 +43,8 @@ const LeftSection = () => {
             <span>{darkTheme?'Light Mode':'Dark Mode'}</span>
           </div>
           <div className='icon-container'>
-            <SettingsIcon className='nav-icons'/>
-            <span>Setting</span>
+              <PopupSetting/>
+              <span>Setting</span>
           </div>
           <div className='icon-container'>
             <BackupIcon className='nav-icons'/>
