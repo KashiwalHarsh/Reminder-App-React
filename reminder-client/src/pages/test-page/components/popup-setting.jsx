@@ -4,7 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useContext, useState } from 'react'
 import ThemeContext from '../context/ThemeContext';
-import useLocalStorage from 'use-local-storage'
+import BackgroundContext from '../context/BackgroundContext';
 
 
 const PopupSetting = () => {
@@ -20,8 +20,8 @@ const PopupSetting = () => {
     };
 
     const {darkTheme} = useContext(ThemeContext)
+    const {background,setBackground} = useContext(BackgroundContext)
 
-    const [background,setBackground] = useLocalStorage('Mountains')
 
     return (
         <div className="setting-container" >

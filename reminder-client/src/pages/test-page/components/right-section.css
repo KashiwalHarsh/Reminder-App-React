@@ -10,10 +10,6 @@
     flex-wrap: wrap;
     align-content: flex-start;
     background-color: var(--body-background);
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.58),
-            rgba(0, 0, 0, 0.58)),
-            url('https://source.unsplash.com/random/1920x1080/?nature');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
