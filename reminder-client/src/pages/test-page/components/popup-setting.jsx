@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useContext, useState } from 'react'
 import ThemeContext from '../context/ThemeContext';
+import useLocalStorage from 'use-local-storage'
 
 
 const PopupSetting = () => {
@@ -20,6 +21,8 @@ const PopupSetting = () => {
 
     const {darkTheme} = useContext(ThemeContext)
 
+    const [background,setBackground] = useLocalStorage('Mountains')
+
     return (
         <div className="setting-container" >
             <div onClick={handleOpen}>
@@ -31,21 +34,17 @@ const PopupSetting = () => {
             >
                 <div className="setting-modal" data-theme={darkTheme&&'dark'}>
                     <h2>Setting</h2>
-                    <p>
-                        Sky
-                    </p>
-                    <p>
-                        Forest
-                    </p>
-                    <p>
-                        Sunsets
-                    </p>
-                    <p>
-                        Flowers
-                    </p>
-                    <p>
-                        Dark
-                    </p>
+                    <p>Select a Custom Background of your choice</p>
+                    <h4>Current Background Theme : {background} </h4>
+                    <select value={background} onChange={e=>setBackground(e.target.value)}>
+                        <option defaultChecked>Forest</option>
+                        <option>Mountains</option>
+                        <option>Sky</option>
+                        <option>Sunset</option>
+                        <option>Flowers</option>
+                        <option>Dark</option>
+
+                    </select>
                     <div className='center-btn'>
                         <Button onClick={handleClose}><CloseIcon /></Button>
                     </div>

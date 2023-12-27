@@ -14,12 +14,28 @@
     text-align: center;
     color: var(--heading-color);
 }
+.setting-modal h4 {
+    margin-bottom: 8px;
+    text-align: left;
+    color: var(--subheading-color);
+    font-size: 1rem;
+    padding: 0px 10px 0px 10px;
+}
 .setting-modal p {
     margin-bottom: 8px;
     text-align: left;
     color: var(--subheading-color);
     font-size: 0.9rem;
     padding: 0px 10px 0px 10px;
+}
+.setting-modal select {
+    border: 1px solid grey;
+    outline: none;
+    background-color: var(--body-background);
+    color: var(--subheading-color);
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin-left: 10px;
 }
 .setting-modal .center-btn {
     display: flex;
