@@ -7,7 +7,7 @@ import BackgroundContextProvider from './context/BackgroundContextProvider';
 // import axios from 'axios';
 
 
-function App() {
+function Test() {
 
   // const [reminderMsg,setReminderMsg] = useState("")
   // const [remindAt,setRemindAt] = useState()
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default Test;
