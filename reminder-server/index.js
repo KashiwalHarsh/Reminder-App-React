@@ -21,8 +21,16 @@ const reminderSchema = new mongoose.Schema(
         isReminded:{type:Boolean},
     }
 )
+const userSchema = new mongoose.Schema(
+    {
+        name:{type:String},
+        email:{type:String},
+        password:{type:String},
+    }
+)
 
 const Reminder = new mongoose.model("reminder",reminderSchema)
+const User = new mongoose.model("user",userSchema)
 
 //Whatsapp Reminding Functionality
 const interval = setInterval(async () => {
@@ -64,9 +72,35 @@ const interval = setInterval(async () => {
 }, 60000);
 
 
+//APIs- Login/Register
+app.post("/register",(req,res)=>{
+    const {name,email,password} = req.body;
+
+    const userfound = User.findOne({email:email})
+
+    if(userfound){
+        res.send({message:"User already Registered"})
+    }else{
+        const user = new User({
+            name,
+            email,
+            password
+        })
+        try{
+            user.save();
+            res.send({message:"Succesfully Registered"})
+        }catch(err){
+            res.send(err)
+        }
+    }
+    
+})
+app.post("/login",(req,res)=>{
+    const {name,email,password} = req.body
+})
 
 
-//APIs
+//APIs- Reminder
 app.get("/getAllReminders", async (req,res)=>{
 
     try{

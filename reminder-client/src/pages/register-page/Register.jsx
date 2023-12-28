@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./Register.css"
 import axios from "axios"
-import { useHistory } from "react-router-dom"
+// import { useHistory } from "react-router-dom"
 
 const Register = () => {
 
@@ -25,7 +25,7 @@ const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:9002/register", user)
+            axios.post("http://localhost:5000/register", user)
             .then( res => {
                 alert(res.data.message)
                 // history.push("/login")
