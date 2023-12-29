@@ -23,7 +23,7 @@ const LeftSection = () => {
   return (
     <div className='left-section' data-theme={darkTheme&&'dark'}>
         <div className='upper'>
-          <PopupBTN/>
+          <PopupBTN />
         </div>
         <div className='lower'>
           <div className='icon-container'>
