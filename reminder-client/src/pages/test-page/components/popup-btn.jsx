@@ -8,18 +8,20 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
 import ThemeContext from '../context/ThemeContext';
+import ReminderContext from '../context/ReminderContext';
 import axios from 'axios';
 
 
 const PopupBTN = () => {
 
     const [reminderMsg,setReminderMsg] = useState("")
-    const [remindAt,setRemindAt] = useState()
+    const [remindAt,setRemindAt] = useState('')
+    const {setReminderList} = useContext(ReminderContext)
 
 
     const addReminder = () =>{
         axios.post("http://localhost:5000/addReminder",{reminderMsg,remindAt})
-        .then(res=>console.log(res.data))
+        .then(res=>setReminderList(res.data))
         setReminderMsg("")
         setRemindAt()
       }

@@ -1,8 +1,9 @@
 import './right-section.css';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import ThemeContext from '../context/ThemeContext';
 import BackgroundContext from '../context/BackgroundContext';
+import ReminderContext from '../context/ReminderContext';
 import axios from 'axios';
 
 
@@ -10,14 +11,13 @@ const RightSection = () => {
   
   const {darkTheme} = useContext(ThemeContext)
   const {background} = useContext(BackgroundContext)
-  
-  const [reminderList,setReminderList] = useState([])
+  const {reminderList,setReminderList} = useContext(ReminderContext)
 
 
   useEffect(()=>{
     axios.get("http://localhost:5000/getAllReminders")
     .then(res=>setReminderList(res.data))
-  },[])
+  },[setReminderList])
 
   const deleteReminder=(id)=>{
     axios.post("http://localhost:5000/deleteReminder",{id})
