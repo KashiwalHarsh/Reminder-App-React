@@ -33,6 +33,7 @@ const Reminder = new mongoose.model("reminder",reminderSchema)
 const User = new mongoose.model("user",userSchema)
 
 //Whatsapp Reminding Functionality
+// use pen paper to devise the functionality so that setInveral gets cleared only run the set interval when remidners are these else not
 const interval = setInterval(async () => {
     try {
         const reminderList = await Reminder.find({ isReminded: false }); // Fetch only unremined reminders
