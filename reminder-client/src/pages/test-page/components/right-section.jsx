@@ -47,7 +47,7 @@ const RightSection = () => {
               <div className="reminder-card" key={reminder._id}>
                 <h2>{reminder.reminderMsg}</h2>
                 <h3>Remind me at : </h3>
-                <span>{String(new Date(reminder.remindAt.toLocaleString("en-us",{timezone:"Asia/Kolkata"})))}</span>
+                <span> {new Date(reminder.remindAt).toLocaleString('en-US', {timeZone: 'Asia/Kolkata',weekday: 'short',year: 'numeric',month: 'short',day: 'numeric',hour: 'numeric',minute: 'numeric',second: 'numeric',})}</span>
                 <br/>
                 <h3>Reminder Status : </h3>
                 <span style={ reminder.isReminded ? { color:'yellowgreen',fontWeight:'bold'} : {color : 'orange',fontWeight:'bold'} }>{reminder.isReminded?" Sent":" Pending"}</span>
