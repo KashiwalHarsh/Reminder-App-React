@@ -27,6 +27,8 @@ const Login = ({ setLoginUser}) => {
             alert(res.data.message)
             setLoginUser(res.data.userfound)
             navigate("/");
+
+            //implement logout button - pic in phone
             
         })
     }
