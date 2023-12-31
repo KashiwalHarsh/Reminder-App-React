@@ -90,7 +90,7 @@ app.post("/register", async (req,res)=>{
         })
         try{
             user.save();
-            res.status(200).json({message:"Succesfully Registered"})
+            res.status(200).json({message:"Succesfully Registered. Please Login Now!"})
         }catch(err){
             res.status(500).json(err)
         }
@@ -104,7 +104,7 @@ app.post("/login", async (req,res)=>{
 
     if(userfound){
         if(password===userfound.password){
-            res.status(200).json({message:"Login Successful",user:userfound})
+            res.status(200).json({message:"Login Successful",userfound:userfound})
         }else{
             res.status(200).json({message:"Password Didn't Match"})
         }

@@ -6,14 +6,14 @@ import { useState } from "react";
 
 function App() {
 
-  const [user,setUser] = useState({})
+  const [user,setLoginUser] = useState(null)
 
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/login" element={<Login/>}/>
+            <Route path="/login" element={<Login setLoginUser={setLoginUser}/>}/>
             <Route path="/register" element={<Register/>}/>
-            <Route exact path="/" element={user ?<Main/>:<Login setLoginUser={setUser}/>}/>
+            <Route exact path="/" element={user && user._id ?<Main/>:<Login setLoginUser={setLoginUser}/>}/>
         </Routes>
     </BrowserRouter>
   );

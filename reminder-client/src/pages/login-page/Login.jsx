@@ -24,8 +24,10 @@ const Login = ({ setLoginUser}) => {
         axios.post("http://localhost:5000/login", user)
         .then(res => {
             console.log(res.data.message)
-            setLoginUser(res.data.user)
-            navigate("/")
+            alert(res.data.message)
+            setLoginUser(res.data.userfound)
+            navigate("/");
+            
         })
     }
 
