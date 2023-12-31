@@ -31,7 +31,7 @@ const Login = ({ setLoginUser}) => {
             //workleft
             //implement logout button - pic in phone
             //implement localstorage - cookie cache learn about it
-            
+            //finish the app asap
             
         })
     }
