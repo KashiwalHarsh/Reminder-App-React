@@ -76,13 +76,12 @@ async function checkReminders(){
 
 
 //APIs- Login/Register
-app.post("/register",(req,res)=>{
+app.post("/register", async (req,res)=>{
     const {name,email,password} = req.body;
 
-    const userfound = User.findOne({email:email})
-
-    if(userfound){
-        res.send({message:"User already Registered"})
+    const userfound = await User.findOne({email:email})
+    if(userfound ){
+        res.status(200).json({message:"User Already Exist"})
     }else{
         const user = new User({
             name,
@@ -91,15 +90,27 @@ app.post("/register",(req,res)=>{
         })
         try{
             user.save();
-            res.send({message:"Succesfully Registered"})
+            res.status(200).json({message:"Succesfully Registered"})
         }catch(err){
-            res.send(err)
+            res.status(500).json(err)
         }
     }
     
 })
-app.post("/login",(req,res)=>{
-    const {name,email,password} = req.body
+app.post("/login", async (req,res)=>{
+    const {email,password} = req.body;
+
+    const userfound = await User.findOne({email:email})
+
+    if(userfound){
+        if(password===userfound.password){
+            res.status(200).json({message:"Login Successful",user:userfound})
+        }else{
+            res.status(200).json({message:"Password Didn't Match"})
+        }
+    }else{
+        res.status(200).json({message:"User Not Registered"})
+    }
 })
 
 
@@ -166,6 +177,6 @@ app.get("/",(req,res)=>{
 
 
 app.listen(process.env.PORT || 5000, () => {
-    console.log("Server is up and running on 3000")
+    console.log("Server is up and running on 5000")
 })
 
