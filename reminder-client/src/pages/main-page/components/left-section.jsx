@@ -1,10 +1,10 @@
 import './left-section.css';
 import React, {useContext } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Person2Icon from '@mui/icons-material/Person2';
 import PopupBTN from './popup-btn';
 import PopupAbout from './popup-about';
 import PopupSetting from './popup-setting';
+import PopupProfile from './popup-profile';
 import DarkToggle from './toggle-dark';
 import ThemeContext from '../context/ThemeContext';
 import PopupBackup from './popup-backup';
@@ -51,8 +51,8 @@ const LeftSection = () => {
               <span>Backup</span>
           </div>
           <div className='icon-container'>
-            <Person2Icon className='nav-icons'/>
-            <span>Profile</span>
+              <PopupProfile/>
+              <span>Profile</span>
           </div>
         </div>
       </div>
