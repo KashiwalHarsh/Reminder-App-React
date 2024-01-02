@@ -7,7 +7,7 @@ import ThemeContext from '../../context/ThemeContext';
 import LoginContext from '../../context/LoginContext';
 
 
-const PopupProfile = () => {
+const PopupProfile = ({setUserName}) => {
     
     const [open, setOpen] = useState(false);
 
@@ -22,6 +22,9 @@ const PopupProfile = () => {
     const {darkTheme} = useContext(ThemeContext)
     const {user,setLoginUser}= useContext(LoginContext)
 
+    setUserName(user.name)
+
+    
     const handleClick =()=>{
         localStorage.setItem("MyUser",JSON.stringify({}))
         setLoginUser({})
@@ -40,7 +43,9 @@ const PopupProfile = () => {
                 <div className="profile-modal" data-theme={darkTheme&&'dark'}>
                     <h2>Profile</h2>
                     <p>Hey {user.name}</p>
-                    <button onClick={handleClick}>Logout</button>
+                    <div className='center-btn'>
+                        <button onClick={handleClick} className='logout-btn'>Logout</button>
+                    </div>
                     <div className='center-btn'>
                         <Button onClick={handleClose}><CloseIcon /></Button>
                     </div>

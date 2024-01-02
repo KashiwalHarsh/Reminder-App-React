@@ -1,5 +1,5 @@
 import './left-section.css';
-import React, {useContext } from 'react'
+import React, {useContext, useState } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PopupBTN from './popup-btn';
 import PopupAbout from './popup-about';
@@ -12,6 +12,7 @@ import PopupBackup from './popup-backup';
 const LeftSection = () => {
 
   const {darkTheme,setDarkTheme}= useContext(ThemeContext)
+  const [userName,setUserName] = useState('Profile')
 
   const handle = (e)=>{    
     e.preventDefault()
@@ -51,8 +52,8 @@ const LeftSection = () => {
               <span>Backup</span>
           </div>
           <div className='icon-container'>
-              <PopupProfile/>
-              <span>Profile</span>
+              <PopupProfile setUserName={setUserName}/>
+              <span>{userName}</span>
           </div>
         </div>
       </div>

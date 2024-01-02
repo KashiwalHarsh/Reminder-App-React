@@ -23,19 +23,26 @@
 }
 .profile-modal p {
     margin-bottom: 8px;
-    text-align: left;
+    text-align: center;
     color: var(--subheading-color);
     font-size: 0.9rem;
     padding: 0px 10px 0px 10px;
 }
-.profile-modal select {
-    border: 1px solid grey;
+.profile-modal .logout-btn {
+    background: #1877f2;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 1rem 0;
+    padding: 0.5rem 0.3rem;
+    border-radius: 8px;
     outline: none;
-    background-color: var(--body-background);
-    color: var(--subheading-color);
-    font-size: 0.9rem;
-    padding: 5px 10px;
-    margin-left: 10px;
+    cursor: pointer;
 }
 .profile-modal .center-btn {
     display: flex;
