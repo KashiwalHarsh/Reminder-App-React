@@ -1,9 +1,9 @@
 import './right-section.css';
 import React, { useContext, useEffect } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
-import ThemeContext from '../context/ThemeContext';
-import BackgroundContext from '../context/BackgroundContext';
-import ReminderContext from '../context/ReminderContext';
+import ThemeContext from '../../context/ThemeContext';
+import BackgroundContext from '../../context/BackgroundContext';
+import ReminderContext from '../../context/ReminderContext';
 import axios from 'axios';
 
 

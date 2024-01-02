@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import ThemeContext from '../context/ThemeContext';
+import ThemeContext from '../../context/ThemeContext';
 
 const DarkToggle = ({handleChange}) => {
 

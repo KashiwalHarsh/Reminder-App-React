@@ -7,8 +7,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
-import ThemeContext from '../context/ThemeContext';
-import ReminderContext from '../context/ReminderContext';
+import ThemeContext from '../../context/ThemeContext';
+import ReminderContext from '../../context/ReminderContext';
 import axios from 'axios';
 
 
