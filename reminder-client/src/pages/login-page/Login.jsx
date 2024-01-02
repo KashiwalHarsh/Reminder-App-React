@@ -29,9 +29,7 @@ const Login = ({ updateUser}) => {
             navigate("/");
 
             //workleft
-            //implement logout button - pic in phone
-            //implement localstorage - cookie cache learn about it
-            //finish the app asap
+            //finish the app asap iith horizontal scroll
             
         })
     }
