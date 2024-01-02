@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Person2Icon from '@mui/icons-material/Person2';
 import React, { useContext, useState } from 'react'
 import ThemeContext from '../../context/ThemeContext';
+import LoginContext from '../../context/LoginContext';
 
 
 const PopupProfile = () => {
@@ -19,6 +20,12 @@ const PopupProfile = () => {
     };
 
     const {darkTheme} = useContext(ThemeContext)
+    const {user,setLoginUser}= useContext(LoginContext)
+
+    const handleClick =()=>{
+        localStorage.setItem("MyUser",JSON.stringify({}))
+        setLoginUser({})
+    }
 
 
     return (
@@ -32,7 +39,8 @@ const PopupProfile = () => {
             >
                 <div className="profile-modal" data-theme={darkTheme&&'dark'}>
                     <h2>Profile</h2>
-                    <p>Add user data and a logout button</p>
+                    <p>Hey {user.name}</p>
+                    <button onClick={handleClick}>Logout</button>
                     <div className='center-btn'>
                         <Button onClick={handleClose}><CloseIcon /></Button>
                     </div>

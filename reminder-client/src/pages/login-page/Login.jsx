@@ -3,7 +3,7 @@ import "./Login.css"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
-const Login = ({ setLoginUser}) => {
+const Login = ({ updateUser}) => {
 
     const navigate = useNavigate()
 
@@ -25,7 +25,7 @@ const Login = ({ setLoginUser}) => {
         .then(res => {
             console.log(res.data.message)
             alert(res.data.message)
-            setLoginUser(res.data.userfound)
+            updateUser(res.data.userfound)
             navigate("/");
 
             //workleft
