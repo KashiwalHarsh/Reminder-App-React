@@ -6,7 +6,7 @@ import PopupAbout from './popup-about';
 import PopupSetting from './popup-setting';
 import PopupProfile from './popup-profile';
 import DarkToggle from './toggle-dark';
-import ThemeContext from '../../context/ThemeContext';
+import ThemeContext from '../../../context/ThemeContext';
 import PopupBackup from './popup-backup';
 
 const LeftSection = () => {

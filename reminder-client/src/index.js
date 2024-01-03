@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import ThemeContextProvider from './pages/context/ThemeContextProvider';
-import BackgroundContextProvider from './pages/context/BackgroundContextProvider';
-import ReminderContextProvider from './pages/context/ReminderContextProvider';
-import LoginContextProvider from './pages/context/LoginContextProvider';
+import ThemeContextProvider from './context/ThemeContextProvider';
+import BackgroundContextProvider from './context/BackgroundContextProvider';
+import ReminderContextProvider from './context/ReminderContextProvider';
+import LoginContextProvider from './context/LoginContextProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

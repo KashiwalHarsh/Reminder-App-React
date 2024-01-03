@@ -3,8 +3,8 @@ import { Button, Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Person2Icon from '@mui/icons-material/Person2';
 import React, { useContext, useState } from 'react'
-import ThemeContext from '../../context/ThemeContext';
-import LoginContext from '../../context/LoginContext';
+import ThemeContext from '../../../context/ThemeContext';
+import LoginContext from '../../../context/LoginContext';
 
 
 const PopupProfile = ({setUserName}) => {

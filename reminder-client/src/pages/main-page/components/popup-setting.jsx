@@ -3,8 +3,8 @@ import { Button, Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useContext, useState } from 'react'
-import ThemeContext from '../../context/ThemeContext';
-import BackgroundContext from '../../context/BackgroundContext';
+import ThemeContext from '../../../context/ThemeContext';
+import BackgroundContext from '../../../context/BackgroundContext';
 
 
 const PopupSetting = () => {

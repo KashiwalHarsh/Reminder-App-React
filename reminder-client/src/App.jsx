@@ -2,7 +2,7 @@ import Main from "./pages/main-page/Main"
 import Login from "./pages/login-page/Login"
 import Register from "./pages/register-page/Register"
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import LoginContext from "./pages/context/LoginContext";
+import LoginContext from "./context/LoginContext";
 import { useContext, useEffect} from "react";
 
 function App() {
