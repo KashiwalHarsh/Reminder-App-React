@@ -8,6 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
+//mongodb Atlas
 mongoose
 .connect(process.env.MONGO_URL)
 .then(() => console.log("Db connected succesfully"))
