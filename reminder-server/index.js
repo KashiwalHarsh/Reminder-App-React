@@ -69,7 +69,7 @@ async function checkReminders(){
             if (reminderTimeout) {
                 clearTimeout(reminderTimeout); // Clear the previous timeout if exists
             }
-            reminderTimeout = setTimeout(checkReminders, 10000);
+            reminderTimeout = setTimeout(checkReminders, 60000);
         }
     }
 }
