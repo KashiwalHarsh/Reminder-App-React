@@ -26,11 +26,7 @@ const Login = ({ updateUser}) => {
             console.log(res.data.message)
             alert(res.data.message)
             updateUser(res.data.userfound)
-            navigate("/");
-
-            //workleft
-            //finish the app asap iith horizontal scroll
-            
+            navigate("/");            
         })
     }
 
