@@ -1,5 +1,7 @@
 .right-section {
+    position: relative;
     height: 94vh;
+    width: 100%;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 5px 5px 15px 5px;
@@ -13,6 +15,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: scroll;
 }
 
 
