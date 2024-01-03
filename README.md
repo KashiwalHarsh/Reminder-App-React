@@ -6,8 +6,9 @@ Stay on top of your tasks and events effortlessly with the WhatsApp Reminder App
 
 - **Reminder Creation:** Easily add, edit, and delete reminders with a user-friendly interface.
 - **Real-Time Notifications:** Receive reminders via WhatsApp at the specified time.
-- **Twilio Integration:** Utilizes Twilio's API for reliable and instant message delivery.
-- **Responsive Design:** Built with Material UI for a responsive and visually appealing user interface.
+- **Secured Login:** User Login/Logout functionality and persistence by using Local Storage and Session.
+- **Dynamic Design:** Built with Material UI for a visually appealing user interface along with customizable UI as per user Preference with Night mode.
+
 
 ## Tech Stack
 
