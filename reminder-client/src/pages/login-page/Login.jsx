@@ -42,6 +42,7 @@ const Login = ({ updateUser }) => {
                 <div className="button" onClick={() => navigate("/register")}>Register</div>
             </div>
             <div className="demo">
+                <h3>Demo account</h3>
                 <p>email - Demo@gmail.com</p>
                 <p>password - Demo@123</p>
             </div>
