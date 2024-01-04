@@ -7,7 +7,7 @@ Stay on top of your tasks and events effortlessly with the WhatsApp Reminder App
 ## Features
 
 - **Reminder Creation:** Easily add, edit, and delete reminders with a user-friendly interface.
-- **Real-Time Notifications:** Receive reminders via WhatsApp at the specified time.
+- **Real-Time Notifications:** Implementation includes the utilization of a Cron job mechanism, systematically assessing pending messages or reminders at predetermined intervals, and triggering notifications to receive reminders via WhatsApp at the specified time.
 - **Secured Login:** User Login/Logout functionality and persistence by using Local Storage and Session.
 - **Dynamic Design:** Built with Material UI for a visually appealing user interface along with customizable UI as per user Preference with Night mode.
 
