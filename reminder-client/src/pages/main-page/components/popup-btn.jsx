@@ -14,17 +14,17 @@ import axios from 'axios';
 
 const PopupBTN = () => {
 
-    const [reminderMsg,setReminderMsg] = useState("")
-    const [remindAt,setRemindAt] = useState('')
-    const {setReminderList} = useContext(ReminderContext)
+    const [reminderMsg, setReminderMsg] = useState("")
+    const [remindAt, setRemindAt] = useState('')
+    const { setReminderList } = useContext(ReminderContext)
 
 
-    const addReminder = () =>{
-        axios.post("http://localhost:5000/addReminder",{reminderMsg,remindAt})
-        .then(res=>setReminderList(res.data))
+    const addReminder = () => {
+        axios.post("https://reminder-app-server-phi.vercel.app/addReminder" || "http://localhost:5000/addReminder", { reminderMsg, remindAt })
+            .then(res => setReminderList(res.data))
         setReminderMsg("")
         setRemindAt()
-      }
+    }
 
     const [open, setOpen] = useState(false);
 
@@ -56,9 +56,9 @@ const PopupBTN = () => {
         },
     }
 
-    const customfn = ()=>{
+    const customfn = () => {
         addReminder()
-        handleClose()      
+        handleClose()
     }
 
     return (
@@ -76,7 +76,7 @@ const PopupBTN = () => {
             >
                 <div className="reminder-modal" data-theme={darkTheme && 'dark'}>
                     <h2 id="reminder-modal-title">Remind Me</h2>
-                    <textarea className='reminder-input' type='text' cols="40" rows="4" placeholder='Reminder note here...' value={reminderMsg} onChange={e=>setReminderMsg(e.target.value)}></textarea>
+                    <textarea className='reminder-input' type='text' cols="40" rows="4" placeholder='Reminder note here...' value={reminderMsg} onChange={e => setReminderMsg(e.target.value)}></textarea>
                     <div className='picker-container'>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DateTimePicker
@@ -90,7 +90,7 @@ const PopupBTN = () => {
                                     seconds: renderTimeViewClock,
                                 }}
                                 disablePast
-                                slotProps={{ popper: { placement: 'right' }}}
+                                slotProps={{ popper: { placement: 'right' } }}
                                 sx={darkTheme && darkStyles}
                             />
                         </LocalizationProvider>

@@ -7,10 +7,10 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const [ user, setUser] = useState({
+    const [user, setUser] = useState({
         name: "",
-        email:"",
-        password:"",
+        email: "",
+        password: "",
         reEnterPassword: ""
     })
 
@@ -24,32 +24,32 @@ const Register = () => {
 
     const register = () => {
         const { name, email, password, reEnterPassword } = user
-        if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:5000/register", user)
-            .then( res => {
-                console.log(res.data.message)
-                alert(res.data.message)
-                navigate("/login")
-            })
+        if (name && email && password && (password === reEnterPassword)) {
+            axios.post("https://reminder-app-server-phi.vercel.app/register" || "http://localhost:5000/register", user)
+                .then(res => {
+                    console.log(res.data.message)
+                    alert(res.data.message)
+                    navigate("/login")
+                })
         } else {
             alert("invlid input")
         }
-        
+
     }
 
     return (
         <div className="register-container">
-        <div className="register">
-            {/* {console.log("User", user)} */}
-            <h1>Register</h1>
-            <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
-            <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
-            <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
-            <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
-            <div className="button" onClick={register} >Register</div>
-            <div>or</div>
-            <div className="button" onClick={()=>navigate("/login")}>Login</div>
-        </div>
+            <div className="register">
+                {/* {console.log("User", user)} */}
+                <h1>Register</h1>
+                <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={handleChange}></input>
+                <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
+                <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={handleChange}></input>
+                <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={handleChange}></input>
+                <div className="button" onClick={register} >Register</div>
+                <div>or</div>
+                <div className="button" onClick={() => navigate("/login")}>Login</div>
+            </div>
         </div>
     )
 }
