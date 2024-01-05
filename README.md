@@ -73,4 +73,3 @@ Contributions are welcome! If you have any ideas for improvements or bug fixes, 
 - [Twilio API Documentation](https://www.twilio.com/docs/whatsapp/api)
 - [Material UI Documentation](https://material-ui.com/)
 - [MERN Stack](https://www.mongodb.com/mern-stack)
-```
