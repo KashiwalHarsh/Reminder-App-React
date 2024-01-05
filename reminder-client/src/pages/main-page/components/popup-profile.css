@@ -1,4 +1,4 @@
-.profile-modal{
+.profile-modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,11 +9,13 @@
     outline: none;
     width: 30%;
 }
+
 .profile-modal h2 {
     margin-bottom: 10px;
     text-align: center;
     color: var(--heading-color);
 }
+
 .profile-modal h4 {
     margin-bottom: 8px;
     text-align: left;
@@ -21,6 +23,7 @@
     font-size: 1rem;
     padding: 0px 10px 0px 10px;
 }
+
 .profile-modal p {
     margin-bottom: 8px;
     text-align: center;
@@ -28,12 +31,13 @@
     font-size: 0.9rem;
     padding: 0px 10px 0px 10px;
 }
+
 .profile-modal .logout-btn {
     background: #1877f2;
     border: none;
     color: #fff;
     font-size: 1rem;
-    text-align:center;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +48,7 @@
     outline: none;
     cursor: pointer;
 }
+
 .profile-modal .center-btn {
     display: flex;
     justify-content: center;
@@ -51,9 +56,17 @@
 }
 
 
-.icon{
-    color:var(--icon-color);
+.icon {
+    color: var(--icon-color);
     cursor: pointer;
     padding: 12px 0px 2px 0px;
     margin-top: 2px;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .profile-modal {
+        padding: 20px;
+        width: 80%;
+    }
 }

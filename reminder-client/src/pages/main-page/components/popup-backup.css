@@ -1,4 +1,4 @@
-.backup-modal{
+.backup-modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,11 +9,13 @@
     outline: none;
     width: 30%;
 }
+
 .backup-modal h2 {
     margin-bottom: 10px;
     text-align: center;
     color: var(--heading-color);
 }
+
 .backup-modal h4 {
     margin-bottom: 8px;
     text-align: left;
@@ -21,6 +23,7 @@
     font-size: 1rem;
     padding: 0px 10px 0px 10px;
 }
+
 .backup-modal p {
     margin-bottom: 8px;
     text-align: left;
@@ -28,6 +31,7 @@
     font-size: 0.9rem;
     padding: 0px 10px 0px 10px;
 }
+
 .backup-modal select {
     border: 1px solid grey;
     outline: none;
@@ -37,6 +41,7 @@
     padding: 5px 10px;
     margin-left: 10px;
 }
+
 .backup-modal .center-btn {
     display: flex;
     justify-content: center;
@@ -44,9 +49,17 @@
 }
 
 
-.icon{
-    color:var(--icon-color);
+.icon {
+    color: var(--icon-color);
     cursor: pointer;
     padding: 12px 0px 2px 0px;
     margin-top: 2px;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .backup-modal {
+        padding: 20px;
+        width: 80%;
+    }
 }
