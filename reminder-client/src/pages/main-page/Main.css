@@ -6,5 +6,5 @@
 .parent {
     display: flex;
     background-color: #e3e3e3;
-    /* height: 100vh; */
+    height: 100vh;
 }

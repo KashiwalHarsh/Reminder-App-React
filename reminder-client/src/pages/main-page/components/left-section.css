@@ -47,6 +47,7 @@
     .left-section {
         height: 100svh;
         padding: 5px 5px 15px 5px;
-        margin: 5px 5px 5px 5px;
+        margin: 5px 5px 5px 0px;
+        border-radius: 0px 8px 8px 0px;
     }
 }

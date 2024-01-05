@@ -101,6 +101,8 @@
     .right-section {
         height: 100vh;
         flex-basis: 93%;
+        margin: 5px 0px 5px 0px;
+        border-radius: 8px 0px 0px 8px;
         flex-direction: row;
         flex-wrap: wrap-reverse;
         overflow-x: hidden;
