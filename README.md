@@ -74,5 +74,3 @@ Contributions are welcome! If you have any ideas for improvements or bug fixes, 
 - [Material UI Documentation](https://material-ui.com/)
 - [MERN Stack](https://www.mongodb.com/mern-stack)
 ```
-
-Replace `yourusername` with your actual GitHub username in the clone URL. Feel free to modify and add more information as needed to better suit your project and its specifics.
