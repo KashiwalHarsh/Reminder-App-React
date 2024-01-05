@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.parent{
+.parent {
     display: flex;
     background-color: #e3e3e3;
+    height: 100vh;
 }
