@@ -1,8 +1,8 @@
-*{
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.add-btn{
+.add-btn {
     border: 1px solid #60519e;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -10,7 +10,8 @@
     margin-top: 10px;
     cursor: pointer;
 }
-.add-icon{
+
+.add-icon {
     color: var(--icon-color);
 }
 
@@ -31,6 +32,7 @@
     text-align: center;
     color: var(--heading-color);
 }
+
 .reminder-modal .reminder-input {
     resize: none;
     border: 1px solid #c6c6c6;
@@ -48,7 +50,7 @@
     color: var(--subheading-color);
 }
 
-.reminder-modal .picker-container{
+.reminder-modal .picker-container {
     display: flex;
     justify-content: center;
 }
@@ -59,7 +61,7 @@
     border: none;
     color: #fff;
     font-size: 1rem;
-    text-align:center;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +72,7 @@
     outline: none;
     cursor: pointer;
 }
+
 .reminder-modal .center-btn {
     display: flex;
     justify-content: center;
@@ -78,4 +81,16 @@
 
 .reminder-modal p {
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .add-btn {
+        margin-top: 5px;
+    }
+
+    .reminder-modal {
+        padding: 20px;
+        width: 80%;
+    }
 }
