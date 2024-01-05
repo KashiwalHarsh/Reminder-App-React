@@ -104,6 +104,7 @@
         flex-direction: row;
         flex-wrap: wrap-reverse;
         align-content: flex-end;
+        overflow-x: hidden;
         overflow-y: scroll;
     }
 }
