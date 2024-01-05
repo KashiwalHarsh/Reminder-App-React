@@ -99,12 +99,17 @@
 @media only screen and (max-width: 640px) {
 
     .right-section {
-        height: 100svh;
+        height: 100vh;
         flex-basis: 93%;
         flex-direction: row;
         flex-wrap: wrap-reverse;
-        align-content: flex-end;
         overflow-x: hidden;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .right-section::-webkit-scrollbar {
+        width: 0.5vw;
+        padding-bottom: 10px;
     }
 }
