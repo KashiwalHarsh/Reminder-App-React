@@ -10,7 +10,7 @@ Stay on top of your tasks and events effortlessly with the WhatsApp Reminder App
 - **Real-Time Notifications:** Implementation includes the utilization of a Cron job mechanism, systematically assessing pending messages or reminders at predetermined intervals, and triggering notifications to receive reminders via WhatsApp at the specified time.
 - **Secured Login:** User Login/Logout functionality and persistence by using Local Storage and Session.
 - **Dynamic Design:** Built with Material UI for a visually appealing user interface along with customizable UI as per user Preference with Night mode.
-
+- **Responsive UI:** Implemented a responsive user interface (UI) optimized for smaller screen form factors, enhancing adaptability and seamless display across a spectrum of devices.
 
 ## Tech Stack
 
